@@ -4,7 +4,7 @@ import com.core.application.port.`in`.dto.GetFoodDto
 
 interface GetFoodUseCase {
 
-    fun execute(): GetFoodDto
+    fun execute(getFoodQuery: GetFoodQuery): GetFoodDto
 
     data class GetFoodQuery(
         val name: String
