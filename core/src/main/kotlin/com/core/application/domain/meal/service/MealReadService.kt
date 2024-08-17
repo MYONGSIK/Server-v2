@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class MealReadService : GetMealUseCase {
 
-    override fun execute(): List<ApplicationMealDto.GetFoodRes> {
+    override fun execute(): List<ApplicationMealDto.GetMealRes> {
         TODO("Not yet implemented")
     }
 

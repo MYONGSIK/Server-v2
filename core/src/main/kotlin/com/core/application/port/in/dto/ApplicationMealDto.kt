@@ -5,7 +5,7 @@ data class ApplicationMealDto (
     val price: Int,
     val description: String
 ) {
-    data class GetFoodRes(
+    data class GetMealRes(
         val idx: Long,
         val type: String,
         val status: String,
