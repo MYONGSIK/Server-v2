@@ -4,11 +4,10 @@ import com.core.common.BaseEntity
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "restaurant", indexes = [
-    Index(name = "restaurant_idx_name", columnList = "name"),
+@Table(name = "campus", indexes = [
+    Index(name = "campus_idx_name", columnList = "name"),
 ])
-class RestaurantJpaEntity : BaseEntity(){
-
+class CampusJpaEntity : BaseEntity() {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val idx: Long = 0
@@ -21,9 +20,4 @@ class RestaurantJpaEntity : BaseEntity(){
 
     @Column(name = "is_deleted")
     val isDeleted: Boolean = false
-
-    @ManyToOne
-    @JoinColumn(name = "campus_id")
-    val campusJpaEntity: CampusJpaEntity = CampusJpaEntity()
-
 }

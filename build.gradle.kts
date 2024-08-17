@@ -45,8 +45,8 @@ subprojects{
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
 		testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 		testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+		implementation("io.github.oshai:kotlin-logging-jvm:5.1.1")
 
-		implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	}
 
 }

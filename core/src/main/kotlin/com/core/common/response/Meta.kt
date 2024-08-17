@@ -19,9 +19,9 @@ data class Meta(
         )
     }
 
-    fun error(error: Error): Meta = Meta(
-        result = "ERROR",
-        errorCode = error.code,
-        message = error.message
+    fun error(errorCode: String, message: String): Meta = Meta(
+        result = "FAIL",
+        errorCode = errorCode,
+        message = message
     )
 }
