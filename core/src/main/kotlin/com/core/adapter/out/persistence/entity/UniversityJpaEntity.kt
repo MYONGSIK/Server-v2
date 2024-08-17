@@ -1,23 +1,22 @@
 package com.core.adapter.out.persistence.entity
 
 import jakarta.persistence.*
-import jakarta.persistence.criteria.CriteriaBuilder.In
 
 @Entity
 @Table(name = "university", indexes = [
     Index(name = "idx_name", columnList = "name"),
 ])
-class University {
+class UniversityJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val idx: Long? = null
 
     @Column(name = "name")
-    val name: String? = null
+    val name: String = "DEFAULT"
 
     @Column(name = "campus_name")
-    val campusName: String? = null
+    val campusName: String = "DEFAULT"
 
     @Column(name = "is_deleted")
-    val isDeleted: Boolean? = null
+    val isDeleted: Boolean = true
 }

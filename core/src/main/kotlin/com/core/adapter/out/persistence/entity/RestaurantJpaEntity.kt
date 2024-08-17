@@ -6,21 +6,21 @@ import jakarta.persistence.*
 @Table(name = "restaurant", indexes = [
     Index(name = "idx_name", columnList = "name"),
 ])
-class Restaurant {
+class RestaurantJpaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val idx: Long? = null
+    val idx: Long = 0
 
     @Column(name = "name")
-    val name: String? = null
+    val name: String = "DEFAULT"
 
     @Column(name = "address")
-    val address: String? = null
+    val address: String = "DEFAULT"
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    val university: University? = null
+    val universityJpaEntity: UniversityJpaEntity? = null
 
 
 }

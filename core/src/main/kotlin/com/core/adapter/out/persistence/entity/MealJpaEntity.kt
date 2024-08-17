@@ -19,11 +19,11 @@ class MealJpaEntity {
 
     @Column(name = "type", length = 20)
     @Enumerated(EnumType.STRING)
-    var type: MealType? = null
+    var type: MealType? = MealType.LUNCH
 
     @Column(name = "status", length = 20)
     @Enumerated(EnumType.STRING)
-    var status: MealStatus? = null
+    var status: MealStatus? = MealStatus.OPEN
 
     @Comment("식사 가격")
     @Column(name = "price")
@@ -31,7 +31,7 @@ class MealJpaEntity {
 
     @ManyToOne
     @JoinColumn(name = "meal_id")
-    var restaurant: Restaurant? = null
+    var restaurantJpaEntity: RestaurantJpaEntity? = null
 
 
 }
