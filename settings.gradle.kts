@@ -4,3 +4,4 @@ plugins {
 rootProject.name = "Server-v2"
 include("core")
 include("admin")
+include("jpa")

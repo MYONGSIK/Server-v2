@@ -1,13 +1,11 @@
-package com.core.adapter.out.persistence.entity
+package com.jpa.domain.entity
 
-import com.core.adapter.out.persistence.enumerate.MealStatus
-import com.core.adapter.out.persistence.enumerate.MealType
-import com.core.common.BaseEntity
+import com.jpa.domain.common.BaseEntity
+import com.jpa.domain.enumerate.MealStatus
+import com.jpa.domain.enumerate.MealType
 import jakarta.persistence.*
-import org.hibernate.annotations.Comment
 import java.math.BigDecimal
 import java.time.LocalDate
-import java.time.LocalDateTime
 
 @Entity
 @Table(

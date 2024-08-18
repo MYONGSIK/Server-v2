@@ -1,9 +1,9 @@
-package com.core.adapter.out.persistence.mapper
+package com.jpa.domain.mapper
 
-import com.core.adapter.out.persistence.entity.MealJpaEntity
-import com.core.adapter.out.persistence.enumerate.MealStatus
-import com.core.adapter.out.persistence.enumerate.MealType
-import com.core.application.domain.meal.model.Meal
+import com.jpa.domain.entity.MealJpaEntity
+import com.jpa.domain.enumerate.MealStatus
+import com.jpa.domain.enumerate.MealType
+import com.jpa.domain.model.Meal
 import org.springframework.stereotype.Component
 import java.math.BigDecimal
 import java.time.LocalDateTime

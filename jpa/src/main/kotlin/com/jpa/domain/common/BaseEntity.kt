@@ -1,4 +1,4 @@
-package com.core.common
+package com.jpa.domain.common
 
 import jakarta.persistence.Column
 import jakarta.persistence.EntityListeners

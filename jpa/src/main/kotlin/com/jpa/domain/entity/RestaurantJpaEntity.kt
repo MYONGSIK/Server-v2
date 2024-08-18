@@ -1,6 +1,6 @@
-package com.core.adapter.out.persistence.entity
+package com.jpa.domain.entity
 
-import com.core.common.BaseEntity
+import com.jpa.domain.common.BaseEntity
 import jakarta.persistence.*
 
 @Entity

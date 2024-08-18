@@ -1,6 +1,6 @@
 package com.core.adapter.`in`.web.dto
 
-import com.core.application.domain.meal.model.Meal
+import com.jpa.domain.model.Meal
 import java.math.BigDecimal
 import java.time.LocalDate
 

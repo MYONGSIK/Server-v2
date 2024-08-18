@@ -1,4 +1,4 @@
-package com.core.adapter.out.persistence.entity
+package com.jpa.domain.entity
 
 import jakarta.persistence.*
 import org.hibernate.annotations.Comment

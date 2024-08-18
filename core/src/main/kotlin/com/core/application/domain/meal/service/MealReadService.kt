@@ -1,15 +1,15 @@
 package com.core.application.domain.meal.service
 
-import com.core.application.domain.meal.model.Meal
 import com.core.application.port.`in`.GetWeekMealUseCase
-import com.core.application.port.out.GetWeekMealPort
+import com.jpa.domain.MealPersistenceAdapter
+import com.jpa.domain.model.Meal
 import org.springframework.stereotype.Service
 import java.time.DayOfWeek
 import java.time.LocalDate
 
 @Service
 class MealReadService(
-    private val getWeekMealPort: GetWeekMealPort
+    private val mealPersistenceAdapter: MealPersistenceAdapter
 ) : GetWeekMealUseCase {
 
     /**
@@ -17,9 +17,9 @@ class MealReadService(
      * @param restaurantName
      * @return List<ApplicationMealDto.GetWeekMealRes>
      */
-    override fun invoke(restaurantIdx: Long): List<Meal> {
+    override operator fun invoke(restaurantIdx: Long): List<Meal> {
         val (startDay, endDay) = getWeekRange()
-        val meals = getWeekMealPort(restaurantIdx, startDay, endDay)
+        val meals = mealPersistenceAdapter.getWeekMeals(restaurantIdx, startDay, endDay)
         return meals
     }
 
@@ -31,7 +31,6 @@ class MealReadService(
         val today = LocalDate.now()
         val startOfWeek = today.minusDays((today.dayOfWeek.value % 7).toLong()).with(DayOfWeek.SUNDAY)
         val endOfWeek = startOfWeek.plusDays(6)
-
         return Pair(startOfWeek, endOfWeek)
     }
 

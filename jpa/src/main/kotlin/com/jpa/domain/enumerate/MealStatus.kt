@@ -1,4 +1,4 @@
-package com.core.adapter.out.persistence.enumerate
+package com.jpa.domain.enumerate
 
 enum class MealStatus(val value: String) {
     OPEN("운영중"),

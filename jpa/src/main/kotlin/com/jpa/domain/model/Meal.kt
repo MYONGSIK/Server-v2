@@ -1,7 +1,7 @@
-package com.core.application.domain.meal.model
+package com.jpa.domain.model
 
-import com.core.adapter.out.persistence.enumerate.MealStatus
-import com.core.adapter.out.persistence.enumerate.MealType
+import com.jpa.domain.enumerate.MealStatus
+import com.jpa.domain.enumerate.MealType
 import java.math.BigDecimal
 import java.time.LocalDate
 import java.time.LocalDateTime

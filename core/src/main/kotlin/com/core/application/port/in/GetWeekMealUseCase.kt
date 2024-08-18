@@ -1,6 +1,7 @@
 package com.core.application.port.`in`
 
-import com.core.application.domain.meal.model.Meal
+import com.jpa.domain.model.Meal
+
 
 interface GetWeekMealUseCase {
 
