@@ -17,9 +17,9 @@ class MealReadService(
      * @param restaurantName
      * @return List<ApplicationMealDto.GetWeekMealRes>
      */
-    override fun invoke(restaurantName: String): List<Meal> {
+    override fun invoke(restaurantIdx: Long): List<Meal> {
         val (startDay, endDay) = getWeekRange()
-        val meals = getWeekMealPort(restaurantName, startDay, endDay)
+        val meals = getWeekMealPort(restaurantIdx, startDay, endDay)
         return meals
     }
 

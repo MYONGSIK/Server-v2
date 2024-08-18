@@ -4,5 +4,5 @@ import com.core.application.domain.meal.model.Meal
 
 interface GetWeekMealUseCase {
 
-    operator fun invoke(campusName: String): List<Meal>
+    operator fun invoke(restaurantIdx: Long): List<Meal>
 }

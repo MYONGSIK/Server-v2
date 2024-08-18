@@ -5,7 +5,7 @@ import java.time.LocalDate
 
 interface GetWeekMealPort {
 
-    operator fun invoke(restaurantName: String,
+    operator fun invoke(restaurantIdx: Long,
                         start: LocalDate,
                         end: LocalDate): List<Meal>
 }

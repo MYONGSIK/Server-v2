@@ -13,8 +13,7 @@ interface MealRepository: JpaRepository<MealJpaEntity, Long> {
     @Query("""
         SELECT m 
         FROM MealJpaEntity m 
-            left join RestaurantJpaEntity r on r.name = :restaurantName
-        WHERE m.isDeleted = false and m.offeredAt between :start and :end
+        WHERE m.isDeleted = false and m.offeredAt between :start and :end and m.restaurantJpaEntity.idx = :restaurantIdx
     """)
-    fun getWeekMeal(restaurantName: String, start: LocalDate, end: LocalDate): List<MealJpaEntity>
+    fun getWeekMeal(restaurantIdx: Long, start: LocalDate, end: LocalDate): List<MealJpaEntity>
 }
